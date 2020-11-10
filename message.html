@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
+    <style>
+      body{
+        background: url(message_back.jpg);
+        background-size: 50vh;
+        overflow-x: hidden;
+      }
+      ::-webkit-scrollbar{
+        display: none;
+      }
+      #info{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            cursor: none;
+            z-index: 100;
+        }
+        .tap{
+          position: absolute;
+          top: 0;
+          left: 28%;
+          height: 30vh;
+          width: 45vw;
+          background-color: transparent;
+        }
+    </style>
+    <title>Birthday Special</title>
+    <link rel = "icon" href =  "icon.jpg" type = "image/x-icon">
+  </head>
+  <body>
+    <div class="tap" onclick="tap()">
+
+    </div>
+    <button type="button" class="btn btn-light m-0 p-0 pl-2 pr-2 rounded-circle" id="info" data-toggle="tooltip" data-placement="top" title="Solve the clue after reading all the messages. Push each letter to be 'Happy'">
+      i
+    </button>
+    <div class="row d-flex justify-content-center">
+      <div class="col-10">
+        <img src="message_wish.jpg" alt="" width="100%">
+      </div>
+  </div>
+    <video src="message.mp4" id="myAudio" autoplay hidden></video>
+    <script>
+      document.getElementById("myAudio").volume = 0.05;
+  </script>
+
+    <div class="row justify-content-center">
+      <div class="col-3 m-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front  d-flex align-items-center justify-content-center">
+              <img src="alisha.PNG" alt="">
+            </div>
+            <div class="flip-card-back d-flex align-items-center">
+              <div class="flap">
+                  <div class="row bg-white p-2">
+                    <div class="row">
+                      <div class="col-6 text-right">
+                          <p class="h3 text-dark">Lovecode:</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-end">
+                      <div class="col-8 text-right">
+                        <input type="text" class="form-control" id="alisha" onkeyup="what()">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-3 m-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front  d-flex align-items-center justify-content-center">
+              <img src="anshika.PNG" alt="">
+            </div>
+            <div class="flip-card-back d-flex align-items-center">
+              <div class="flap">
+                  <div class="row bg-white p-2">
+                    <div class="row">
+                      <div class="col-6 text-right">
+                          <p class="h3 text-dark">Lovecode:</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-end">
+                      <div class="col-8 text-right">
+                        <input type="text" class="form-control" id="anshika" onkeyup="what()">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-3 m-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front  d-flex align-items-center justify-content-center">
+              <img src="vanshika.PNG" alt="">
+            </div>
+            <div class="flip-card-back d-flex align-items-center">
+              <div class="flap">
+                  <div class="row bg-white p-2">
+                    <div class="row">
+                      <div class="col-6 text-right">
+                          <p class="h3 text-dark">Lovecode:</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-end">
+                      <div class="col-8 text-right">
+                        <input type="text" class="form-control" id="vanshika" onkeyup="what()">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-3 m-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front  d-flex align-items-center justify-content-center">
+              <img src="shruti.PNG" alt="">
+            </div>
+            <div class="flip-card-back d-flex align-items-center">
+              <div class="flap">
+                  <div class="row bg-white p-2">
+                    <div class="row">
+                      <div class="col-6 text-right">
+                          <p class="h3 text-dark">Lovecode:</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-end">
+                      <div class="col-8 text-right">
+                        <input type="text" class="form-control" id="shruti" onkeyup="what()">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-3 m-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front  d-flex align-items-center justify-content-center">
+              <img src="riyam.PNG" alt="">
+            </div>
+            <div class="flip-card-back d-flex align-items-center">
+              <div class="flap">
+                  <div class="row bg-white p-2">
+                    <div class="row">
+                      <div class="col-6 text-right">
+                          <p class="h3 text-dark">Lovecode:</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-end">
+                      <div class="col-8 text-right">
+                        <input type="text" class="form-control" id="riyam" onkeyup="what()">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-3 m-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front  d-flex align-items-center justify-content-center">
+              <img src="riyas.PNG" alt="">
+            </div>
+            <div class="flip-card-back d-flex align-items-center">
+              <div class="flap">
+                  <div class="row bg-white p-2">
+                    <div class="row">
+                      <div class="col-6 text-right">
+                          <p class="h3 text-dark">Lovecode:</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-end">
+                      <div class="col-8 text-right">
+                        <input type="text" class="form-control" id="riyas" onkeyup="what()">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-3 m-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front  d-flex align-items-center justify-content-center">
+              <img src="ishita.PNG" alt="">
+            </div>
+            <div class="flip-card-back d-flex align-items-center">
+              <div class="flap">
+                  <div class="row bg-white p-2">
+                    <div class="row">
+                      <div class="col-6 text-right">
+                          <p class="h3 text-dark">Lovecode:</p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-end">
+                      <div class="col-8 text-right">
+                        <input type="text" class="form-control" id="ishita" onkeyup="what()">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <script>
+      function what(){
+        var a=document.getElementById("alisha").value;
+        var b=document.getElementById("vanshika").value;
+        var c=document.getElementById("anshika").value;
+        var d=document.getElementById("shruti").value;
+        var e=document.getElementById("riyas").value;
+        var f=document.getElementById("riyam").value;
+        var g=document.getElementById("ishita").value;
+
+        console.log(a);
+
+        if(a=='101')
+        {
+          document.getElementById("alisha").value='';
+          alisha();
+        }
+        if(b=='3stud')
+        {
+          document.getElementById("vanshika").value='';
+          vanshika();
+        }
+        if(c=='Aj2408')
+        {
+          document.getElementById("anshika").value='';
+          anshika();
+        }
+        if(d=='_6610SHRUTI')
+        {
+          document.getElementById("shruti").value='';
+          shruti();
+        }
+        if(e=='frooti')
+        {
+          document.getElementById("riyas").value='';
+          riyas();
+        }
+        if(f=='5385')
+        {
+          document.getElementById("riyam").value='';
+          riyam();
+        }
+        if(g=='golufrommirzapur')
+        {
+          document.getElementById("ishita").value='';
+          ishita();
+        }
+      }
+
+
+      function alisha()
+      {
+        window.open("alisha.html");
+      }
+      function vanshika()
+      {
+        window.open("vanshika.html");
+      }
+      function anshika()
+      {
+        window.open("anshika.html");
+      }
+      function riyam()
+      {
+        window.open("riyam.html");
+      }
+      function riyas()
+      {
+        window.open("riyas.html");
+      }
+      function shruti()
+      {
+        window.open("shruti.html");
+      }
+      function ishita()
+      {
+        window.open("ishita.html");
+      }
+
+      $c=0;
+      function tap(){
+        $c++;
+        if($c>=5)
+        {
+          location.href="happy.html";
+        }
+      }
+    </script>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

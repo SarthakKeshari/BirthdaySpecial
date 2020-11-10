@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Special</title>
+    <link rel = "icon" href =  "icon.jpg" type = "image/x-icon">
+    <style>
+        @media screen and (max-width: 2500px) {
+            body {
+                display:none;
+            }
+        }
+        body{
+            background: black;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <video src="b_intro.mp4" id="myVideo" autoplay></video>
+
+    <script type='text/javascript'>
+        document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+        function myHandler(e) {
+            location.href="light_up.html";
+        }
+    </script>
+</body>
+</html>

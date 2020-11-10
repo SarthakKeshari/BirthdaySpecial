@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Birthday Special</title>
+    <link rel = "icon" href =  "icon.jpg" type = "image/x-icon">
+      <style>
+          body{
+              overflow: hidden;
+              background: url(b_celebration.jpg);
+          }
+          #question1{
+            display: block;
+            }
+
+            .question{
+            display: none;
+            }
+
+            .prev_next{
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            }
+
+            .submit_button{
+            position: absolute;
+            bottom: 30px;
+            width: 72%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+      </style>
+</head>
+<body>
+    <audio src="quiz.mp3" id="myAudio" autoplay hidden loop></audio>
+    <script>
+        document.getElementById("myAudio").volume = 0.2;
+    </script>
+    
+
+      <div class="container ques_area bg-light">
+
+        <div id="myForm" name="myForm" action="quiz.html" method="POST">
+
+
+                <div class="question p-2 border border-light" id="question1">
+                <p class="text-success h4 mb-4 text-center">OOOOOppppppppppsssssssss!!!!!! <br> Quiz even on Birthday😜</p>
+                <hr>
+                <div class="mt-4 p-5 border border-dark h5">
+                    <h5>A club has 256 members of whom 144 can play football, 123 can play tennis, and 132 can play cricket. Moreover, 58 members can play both football and tennis, 25 can play both cricket and tennis, while 63 can play both football and cricket. If every member can play at least one game, then the number of members who can play only tennis is</h5>
+                </div>
+                <div class="row">
+                    <input type="text" class="form-control" id="a" placeholder="Your Answer Here...">
+                </div>
+                </div>
+
+                <div class="question p-2 border border-light" id="question2">
+                    <p class="text-success h4 mb-4 text-center">OOOOOppppppppppsssssssss!!!!!! <br> Quiz even on Birthday😜</p>
+                    <hr>
+                    <div class="mt-4 p-4 border border-dark h5">
+                        <h5>Students in a college are discussing two proposals --<br>
+                            A: a proposal by the authorities to introduce dress code on campus, and<br>
+                            B: a proposal by the students to allow multinational food franchises to set up outlets on college campus.<br>
+                            <br>
+                            A student does not necessarily support either of the two proposals. In an upcoming election for student union president, there are two candidates in fray: Sunita and Ragini. Every student prefers one of the two candidates.<br>
+                            <br>
+                            A survey was conducted among the students by picking a sample of 500 students. The following information was noted from this survey.<br>
+                            1) 250 students supported proposal A and 250 students supported proposal B.<br>
+                            2) Among the 200 students who preferred Sunita as student union president, 80% supported proposal A.<br>
+                            3) Among those who preferred Ragini, 30% supported proposal A.<br>
+                            4) 20% of those who supported proposal B preferred Sunita.<br>
+                            5) 40% of those who did not support proposal B preferred Ragini.<br>
+                            6) Every student who preferred Sunita and supported proposal B also supported proposal A.<br>
+                            7) Among those who preferred Ragini, 20% did not support any of the proposals.<br>
+                            Among the students surveyed who supported proposal A, what percentage preferred Sunita for student union president?</h5>
+                    </div>
+                    <div class="row">
+                    <input type="text" class="form-control" id="b" placeholder="Your Answer Here...">
+                </div>
+                    </div>
+                <div class="question p-2 border border-light" id="question3">
+                    <p class="text-success h4 mb-4 text-center">OOOOOppppppppppsssssssss!!!!!! <br> Quiz even on Birthday😜</p>
+                    <hr>
+                    <div class="mt-4 p-4 border border-dark h5">
+                        <h5>In a titration for estimation of free CO2, the burette reading was 5 for 50ml of water sample. What is the amount of free CO2 present in the sample?</h5>
+                    </div>
+                    <div class="row">
+                    <input type="text" class="form-control" id="c" placeholder="Your Answer Here...">
+                </div>
+                    </div>
+                <div class="question p-2 border border-light" id="question4">
+                    <p class="text-success h4 mb-4 text-center">OOOOOppppppppppsssssssss!!!!!! <br> Quiz even on Birthday😜</p>
+                    <hr>
+                    <div class="mt-4 p-4 border border-dark h5">
+                        <!-- Button trigger modal -->
+                            <button type="button" class="btn mb-5 btn-dark form-control" data-toggle="modal" data-target="#exampleModal">
+                              Click to view comprehension
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Tale of Aladdin</h5>
+                                  </div>
+                                  <div class="modal-body p" style="font-weight: 400;">
+                                    <p>
+                                    In the past, credit for telling the tale of Aladdin has often gone to Antoine Galland . . . the first European translator of . . . Arabian Nights [which] started as a series of translations of an incomplete manuscript of a medieval Arabic story collection. . . But, though those tales were of medieval origin, Aladdin may be a more recent invention. Scholars have not found a manuscript of the story that predates the version published in 1712 by Galland, who wrote in his diary that he first heard the tale from a Syrian storyteller from Aleppo named Hanna Diyab . . .
+                                    <br><br>
+                                    Despite the fantastical elements of the story, scholars now think the main character may actually be based on a real person’s real experiences. . . . Though Galland never credited Diyab in his published translations of the Arabian Nights stories, Diyab wrote something of his own: a travelogue penned in the mid-18th century. In it, he recalls telling Galland the story of Aladdin [and] describes his own hard-knocks upbringing and the way he marveled at the extravagance of Versailles. The descriptions he uses were very similar to the descriptions of the lavish palace that ended up in Galland’s version of the Aladdin story. [Therefore, author Paulo Lemos] Horta believes that “Aladdin might be the young Arab Maronite from Aleppo, marveling at the jewels and riches of Versailles.” . . .
+                                    <br><br>
+                                    For 300 years, scholars thought that the rags-to-riches story of Aladdin might have been inspired by the plots of French fairy tales that came out around the same time, or that the story was invented in that 18th century period as a byproduct of French Orientalism, a fascination with stereotypical exotic Middle Eastern luxuries that was prevalent then. The idea that Diyab might have based it on his own life — the experiences of a Middle Eastern man encountering the French, not vice-versa — flips the script. [According to Horta,] “Diyab was ideally placed to embody the overlapping world of East and West, blending the storytelling traditions of his homeland with his youthful observations of the wonder of 18th-century France.” . . .
+                                    <br><br>
+                                    To the scholars who study the tale, its narrative drama isn’t the only reason storytellers keep finding reason to return to Aladdin. It reflects not only “a history of the French and the Middle East, but also [a story about] Middle Easterners coming to Paris and that speaks to our world today,” as Horta puts it. “The day Diyab told the story of Aladdin to Galland, there were riots due to food shortages during the winter and spring of 1708 to 1709, and Diyab was sensitive to those people in a way that Galland is not. When you read this diary, you see this solidarity among the Arabs who were in Paris at the time. . . . There is little in the writings of Galland that would suggest that he was capable of developing a character like Aladdin with sympathy, but Diyab’s memoir reveals a narrator adept at capturing the distinctive psychology of a young protagonist, as well as recognizing the kinds of injustices and opportunities that can transform the path of any youthful adventurer.”
+                                    </p>
+                                </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <br>
+                            <h5>
+                            The author of the passage is most likely to agree with which of the following explanations for the origins of the story of Aladdin?<br>
+                            <br><br>
+                            A. Galland derived the story of Aladdin from Diyab’s travelogue in which he recounts his fascination with the wealth of Versailles. <br>
+                            B. The story of Aladdin has its origins in an undiscovered, incomplete manuscript of a medieval Arabic collection of stories. <br>
+                            C. Basing it on his own life experiences, Diyab transmitted the story of Aladdin to Galland who included it in Arabian Nights. <br>
+                            D. Galland received the story of Aladdin from Diyab who, in turn, found it in an incomplete medieval manuscript. <br>
+                        </h5>
+                    </div>
+                    <div class="row">
+                    <input type="text" class="form-control" id="d" placeholder="Your Answer Here...">
+                </div>
+                    </div>
+                <div class="question p-2 border border-light" id="question5">
+                    <p class="text-success h4 mb-4 text-center">OOOOOppppppppppsssssssss!!!!!! <br> Quiz even on Birthday😜</p>
+                    <hr>
+                    <div class="mt-4 p-4 border border-dark h5">
+                        <h5>Identify the experiment : </h5>
+                        <img src="ques.jpeg" alt="">
+                    </div>
+                    <div class="row">
+                    <input type="text" class="form-control" id="e" placeholder="Your Answer Here...">
+                </div>
+                    <div class="row d-flex justify-content-center m-2">
+                        <div class="col-3 d-flex justify-content-center">
+                                <input type="submit" name="submit" id="" class="btn btn-success" value="Submit Quiz" onclick="check()"><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<script>
+    function check()
+    {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        var d = document.getElementById("d").value;
+        var e = document.getElementById("e").value;
+
+        if(a=='43')
+        {
+            if(b=='64')
+            {
+                if(c=='44')
+                {
+                    if(d=='c' || d=='C')
+                    {
+                        if(e=='Girdling' || e=='girdling' || e=='GIRDLING')
+                        {
+                            location.href="login.html";
+                        }
+                        else
+                        {
+                            alert("Question 5 Incorrect");
+                        }
+                    }
+                    else
+                    {
+                        alert("Question 4 Incorrect");
+                    }
+                }
+                else
+                {
+                    alert("Question 3 Incorrect");
+                }
+            }
+            else
+            {
+                alert("Question 2 Incorrect");
+            }
+        }
+        else
+        {
+            alert("Question 1 Incorrect");
+        }
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+
+        setTimeout("location.reload(true);", 1000);
+    }
+</script>
+      
+
+    
+<div class="row prev_next">
+        <div class="col-4">
+            <button class="btn btn-dark" onclick="prev()"><- Prev</button>
+        </div>
+        
+        <div class="col-4 ml-auto">
+            <button class="btn btn-dark" onclick="next()">Next -></button>
+        </div>
+    </div>
+
+</div>
+    <script>
+
+        var counter = 1;
+    
+
+        function next()
+        {
+            counter = (counter%5)+1;
+            var x = document.getElementsByClassName("question");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display= "none";
+            }
+            
+            var a="question"+counter;
+            document.getElementById(a).style.display = "block";
+
+            var y = document.getElementsByClassName("ques_num");
+            
+
+            console.log(counter);
+        }
+
+        function prev()
+        {
+            counter = counter-1;
+            if(counter<1)
+            {
+                counter=5;
+            }
+            var x = document.getElementsByClassName("question");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display= "none";
+            }
+            
+            var a="question"+counter;
+            document.getElementById(a).style.display = "block";
+
+            var y = document.getElementsByClassName("ques_num");
+
+
+            console.log(counter);
+        }
+    </script>
+
+    </div>
+      
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+<!-- Q1 CAT 2019 Question Paper Slot 1 - Set Theory
+A club has 256 members of whom 144 can play football, 123 can play tennis, and 132 can play cricket. Moreover, 58 members can play both football and tennis, 25 can play both cricket and tennis, while 63 can play both football and cricket. If every member can play at least one game, then the number of members who can play only tennis is
+
+32
+43 Ans
+38
+45 -->
+
+
+<!-- Q2 CAT DILR : CAT 2019 Question Paper Slot 2
+Set 3 : Students & Proposals
+Students in a college are discussing two proposals --
+A: a proposal by the authorities to introduce dress code on campus, and
+B: a proposal by the students to allow multinational food franchises to set up outlets on college campus.
+
+A student does not necessarily support either of the two proposals. In an upcoming election for student union president, there are two candidates in fray: Sunita and Ragini. Every student prefers one of the two candidates.
+
+A survey was conducted among the students by picking a sample of 500 students. The following information was noted from this survey.
+1) 250 students supported proposal A and 250 students supported proposal B.
+2) Among the 200 students who preferred Sunita as student union president, 80% supported proposal A.
+3) Among those who preferred Ragini, 30% supported proposal A.
+4) 20% of those who supported proposal B preferred Sunita.
+5) 40% of those who did not support proposal B preferred Ragini.
+6) Every student who preferred Sunita and supported proposal B also supported proposal A.
+7) Among those who preferred Ragini, 20% did not support any of the proposals.
+
+CAT Previous year paper - CAT Exam DI LR
+Among the students surveyed who supported proposal A, what percentage preferred Sunita for student union president?     64ans -->
+
+
+
+
+<!-- Q4 The author of the passage is most likely to agree with which of the following explanations for the origins of the story of Aladdin?
+
+A. Galland derived the story of Aladdin from Diyab’s travelogue in which he recounts his fascination with the wealth of Versailles.
+B. The story of Aladdin has its origins in an undiscovered, incomplete manuscript of a medieval Arabic collection of stories.
+C. Basing it on his own life experiences, Diyab transmitted the story of Aladdin to Galland who included it in Arabian Nights.
+D. Galland received the story of Aladdin from Diyab who, in turn, found it in an incomplete medieval manuscript. 
+
+OPtion c ans-->

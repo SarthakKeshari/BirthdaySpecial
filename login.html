@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
+    <title>Birthday Special</title>
+    <link rel = "icon" href =  "icon.jpg" type = "image/x-icon">
+    <style>
+        .signupform
+        {
+            padding-bottom: 10vh;
+        }
+
+
+        #join_head{
+            color: #4A8B4F;
+            font-weight: 500;
+            font-size: 25px;
+            text-shadow: 1px 1px 10px rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            margin-top: 5vh;
+            margin-bottom: 0;
+        }
+        
+        #join_head_udr{
+            margin: 0;
+            width: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border-top: 1px solid rgb(0, 0, 0)
+        }
+
+        .join{
+            height: 65vh;
+            width: 65vh;
+            border-radius: 100%;
+            background-color: #ffffff;
+            border: 1px solid #345E37;
+            margin: 15vh auto 0vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .join .userlogo{
+            margin-top: -7vh;
+            height: 15vh;
+            width: 15vh;
+            border-radius: 100%;
+            background-color: #ffffff;
+            border: 1px solid #4A8B4F;
+        }
+            
+        .join .inputfields{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5vh;
+        }
+
+        .join input{
+            margin: 20px;
+            border: 1px solid #4a8b4f73;
+            border-radius: 50px;
+            padding: 5px;
+            width: 300px;
+            outline: none;
+        }
+
+        .join input::placeholder{
+            font-size: 14px;
+            color: #3B764050;
+            font-weight: 500;
+        }
+
+        .join p{
+            font-size: 10px;
+            margin-top: 8px;
+        }
+
+        .join button{
+            width: 120px;
+            background-color: #4A8B4F;
+            color: white;
+            border-radius: 50px;
+            box-shadow: 0px 0px 4px black;
+            border: 0.1px solid rgba(0, 0, 0, 0.5);
+        }
+        .outer-wrapper{
+            width: 100vh;
+            height: 100vw;
+            transform: rotate(-90deg) translateX(-100vh);
+            transform-origin: top left;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            position: absolute;
+        }
+        
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 200vw;
+            transform: rotate(90deg) translateY(-100vh);
+            transform-origin: top left;
+            overflow: hidden;
+        }
+
+        .slide{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .one{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: change 5s infinite;
+        }
+
+        .five{
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%,-50%);
+        }
+
+        @keyframes change {
+            0%{
+                background:linear-gradient( pink, orange);
+            }
+            25%{
+                background:linear-gradient(aqua, pink);
+            }
+            50%{
+                background:linear-gradient(lime, aqua);
+            }
+            75%{
+                background:linear-gradient(yellow, lime);
+            }
+            100%{
+                background:linear-gradient(orange, yellow);
+            }
+        }
+        #present{
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            transform: translate(-10%,-90%);
+        }
+        #info{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            cursor: none;
+            z-index: 100;
+        }
+    </style>
+  </head>
+  <body onload="JSalert()">
+    <button type="button" class="btn btn-dark text-white m-0 p-0 pl-2 pr-2 rounded-circle" id="info" data-toggle="tooltip" data-placement="top" title="Oops it didn't help you 😜">
+        i
+      </button>
+      <audio src="login.mp3" autoplay hidden></audio>
+    <div class="outer-wrapper">
+        <div class="wrapper">
+            <div class="slide one">
+                <div id="birthday_banner">
+                    <h1 style="opacity: 5%;">Swipe</h1>
+                </div>
+            </div>
+            <div class="long five">
+                <img src="present.png" id="present" alt="" width="150%">
+                <div class="signupform" id="signupform">
+                    <div class="join align-items-center">
+                        <div class="userlogo d-flex justify-content-center">
+                          <img src="icon.jpg" alt="" class="rounded-circle" width="100%">
+                        </div> 
+                        <div>
+                          <div class="inputfields">
+                              <input type="time" placeholder="Time" id="time" required>
+                              <input type="password" placeholder="Color" id="color" required>
+                              <!-- <input type="password" placeholder="Confirm Password" id="password-confirm" required> -->
+                              <input type="password" placeholder="Animal" id="animal" required>
+                              <input type="password" placeholder="Password" id="password" required>
+                              <!-- <p>By creating an account you agree to our <a href="Databases/HandsOnEnglish_Terms and Conditions.docx" style="color:dodgerblue" download="HandsOnEnglish - Terms and Conditions">Terms & Privacy</a>.</p> -->
+            
+                              <button type="submit" class="signupbtn" onclick="clicked()">Find Love</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function clicked()
+    {
+        $time=document.getElementById("time").value;
+        $color=document.getElementById("color").value;
+        $animal=document.getElementById("animal").value;
+        $password=document.getElementById("password").value;
+
+        console.log($time);
+        console.log($color);
+        console.log($animal);
+        console.log($password);
+
+        if($time=='03:45' && $color=='black' && $animal=='sarthak' && $password=='kalikhu')
+        {
+            location.href='message.html';
+        }
+        else
+        {
+            swal({
+            title: "OOOHHHHH NOOOOOOOOOO!!!!!!",
+            text: "I guess you wrote incorrect spelling \n or \n You must have not kept in mind what was asked to keep in mind",
+            icon: "sad.gif",
+            button: "OK",
+            });
+
+            document.getElementById("time").value='';
+            document.getElementById("color").value='';
+            document.getElementById("animal").value='';
+            document.getElementById("password").value='';
+        }
+    }
+</script>
+
+
+<script type="text/javascript">
+    function JSalert(){
+        swal({
+            title: "Hey! Just keep it in mind",
+            text: "This Suits -> a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z",
+            button: "OK",
+        });
+    }
+    </script>
+
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>
